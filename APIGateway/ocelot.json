@@ -1,0 +1,30 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/employee",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "18268"
+        }
+      ],
+      "Key": "employeekey",
+      "UpstreamPathTemplate": "/employee",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/User",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "55703"
+        }
+      ],
+      "Key": "userkey",
+      "UpstreamPathTemplate": "/user",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ]
+}
